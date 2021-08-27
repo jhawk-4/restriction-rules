@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RestrictionRule xmlns="http://soap.sforce.com/2006/04/metadata">
+  <active>true</active>
+  <description>Support Agents can only see packed items</description>
+  <enforcementType>Restrict</enforcementType>
+  <masterLabel>Only Packed Items</masterLabel>
+  <recordFilter>Packed__c = true</recordFilter>
+  <targetEntity>Camping_Item__c</targetEntity>
+  <userCriteria>$User.Department = 'Customer Support'</userCriteria>
+  <version>1</version>
+</RestrictionRule>
